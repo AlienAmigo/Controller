@@ -1,7 +1,16 @@
 .page {
-  font-family: $font-family;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
 
-  &__inner {}
+  font-family: $font-family;
+  background-color: $gray-light;
+
+  &__inner {
+    width: 275px;
+  }
 
   &__content {}
 

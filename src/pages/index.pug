@@ -1,28 +1,24 @@
-include ../pug/mixins.pug
+extends ../pug/layout.pug
 
-doctype html
-html(class='page  no-js', lang='ru')
+block title
+  title Контроллер | Мобильные приложения для Android и iOS
 
-  head
-    meta(charset='utf-8')
-    meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    meta(name='description', content='')
-    //- link(rel="apple-touch-icon", sizes="72x72", href="img/favicon/apple-touch-icon.png")
-    //- link(rel="icon", type="image/png", sizes="32x32", href="img/favicon/favicon-32x32.png")
-    //- link(rel="icon", type="image/png", sizes="16x16", href="img/favicon/favicon-16x16.png")
-    //- link(rel="manifest", href="img/favicon/site.webmanifest")
-    //- link(rel="mask-icon", href="img/favicon/safari-pinned-tab.svg", color="5bbad5")
-    //- meta(name="msapplication-TileColor", content="#ffc40d")
-    //- meta(name="theme-color", content="#ffffff")
-    //- link(rel='stylesheet', href='css/style.css')
-    title Человек против системы | Сайт в разработке
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    script.
-      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
-
-  body
+block body
+  body.page
     noscript У вас отключен JavaScript. Это пугает.
+    main.page_inner
+      h1.title скачай приложение #[span контролер]
+      .download-group
+        button.download-group__item.download-group__item--android get on
+        button.download-group__item.download-group__item--ios download on the #[span iPhone]
+        a.download-group__inst-link(href='#') Инструкция по&nbsp;установке на&nbsp;iPhone
+      .banners
+        .banners__item.banners__item--org
+        a.banners__item.banners__item--victorina(href='https://vmk.myopenugra.ru/index.php', target='_blank')
+    .page__footer
+      a(href='#', target='_blank') Политика конфиденциальности данных
+
+  //- .popup
+  //-   form.popup__form
+  //-   .popup__title Введите 6-значный код
+  //-   submit.popup__submit Скачать
