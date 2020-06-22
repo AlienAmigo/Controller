@@ -1,0 +1,89 @@
+.download-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+
+  &__item {
+    display: block;
+    position: relative;
+    width: 178px;
+    height: 50px;
+    margin-bottom: 22px;
+    border: 2px solid #bdbdbd;
+    border-radius: 6px;
+    background: #000;
+    color: #fff;
+    outline: 0;
+    font-family: $font-family;
+    line-height: 1.4em;
+    cursor: pointer;
+    transition: background 0.5s ease-in;
+
+    &:hover {
+      background: linear-gradient(-45deg, $gray 0%, $gray-dark 100%);
+      transition: background 0.5s ease-in;
+    }
+
+    &--android {
+      padding-right: 40px;
+      font-size: 18px;
+      font-weight: 600;
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 29px;
+        height: 32px;
+        top: 50%;
+        right: 40px;
+        background-image: url(../img/android_logo.svg);
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        transform: translateY(-50%);
+      }
+    }
+
+    &--ios {
+      padding-left: 54px;
+      font-size: 13px;
+      text-align: left;
+
+      span {
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 35px;
+        top: 50%;
+        left: 13px;
+        background-image: url(../img/apple_logo.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        transform: translateY(-50%);
+      }
+    }
+
+  }
+
+  &__inst-link {
+    font-size: 16px;
+    line-height: 112%;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: $text-color;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+  }
+}

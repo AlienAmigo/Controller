@@ -33,10 +33,208 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
-  font-family: -apple-system, "circe", Arial, sans-serif;
-  background-color: #f2f2f2; }
+  font-family: -apple-system, circe, Arial, sans-serif;
+  background-image: url(../img/back_sm.png);
+  background-repeat: no-repeat;
+  background-size: auto calc(100% - 365px);
+  background-position: top 365px center;
+  background-color: #f2f2f2;
+  background-blend-mode: multiply;
+  color: #333; }
   .page__inner {
+    background: none;
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
     width: 275px; }
+  .page__title {
+    margin: 56px 0 45px;
+    padding: 0;
+    font-size: 23px;
+    line-height: 1.4em;
+    font-weight: 400; }
+    .page__title span {
+      display: block;
+      font-weight: 800;
+      font-size: 38px;
+      text-transform: uppercase; }
+  .page__footer {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    height: auto;
+    margin: 0 0 40px;
+    text-align: center; }
+    .page__footer a {
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0.06em;
+      color: #333;
+      opacity: 0.8;
+      text-decoration: none; }
+      .page__footer a:hover {
+        opacity: 1;
+        text-decoration: underline; }
+
+.download-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 50px; }
+  .download-group__item {
+    display: block;
+    position: relative;
+    width: 178px;
+    height: 50px;
+    margin-bottom: 22px;
+    border: 2px solid #bdbdbd;
+    border-radius: 6px;
+    background: #000;
+    color: #fff;
+    outline: 0;
+    font-family: -apple-system, circe, Arial, sans-serif;
+    line-height: 1.4em;
+    cursor: pointer;
+    -webkit-transition: background 0.5s ease-in;
+    transition: background 0.5s ease-in; }
+    .download-group__item:hover {
+      background: linear-gradient(-45deg, #808080 0%, #333 100%);
+      -webkit-transition: background 0.5s ease-in;
+      transition: background 0.5s ease-in; }
+    .download-group__item--android {
+      padding-right: 40px;
+      font-size: 18px;
+      font-weight: 600; }
+      .download-group__item--android::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 29px;
+        height: 32px;
+        top: 50%;
+        right: 40px;
+        background-image: url(../img/android_logo.svg);
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%); }
+    .download-group__item--ios {
+      padding-left: 54px;
+      font-size: 13px;
+      text-align: left; }
+      .download-group__item--ios span {
+        font-size: 16px;
+        font-weight: 600; }
+      .download-group__item--ios::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 35px;
+        top: 50%;
+        left: 13px;
+        background-image: url(../img/apple_logo.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%); }
+  .download-group__inst-link {
+    font-size: 16px;
+    line-height: 112%;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #333;
+    text-decoration: none; }
+    .download-group__inst-link:hover {
+      opacity: 1;
+      text-decoration: underline; }
+
+.banners {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 55px 0 480px; }
+  .banners__item {
+    margin-bottom: 20px;
+    outline: 0;
+    background-position: center center;
+    background-repeat: no-repeat; }
+    .banners__item--org {
+      width: 100%;
+      height: 129px;
+      background-image: url(../img/org_sm.png);
+      background-blend-mode: multiply;
+      mix-blend-mode: normal; }
+    .banners__item--victorina {
+      width: 107px;
+      height: 77px;
+      background-image: url(../img/victorina_sm.png); }
+      .banners__item--victorina:hover {
+        opacity: 0.5; }
+
+.popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  z-index: 16;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.87);
+  opacity: 0.8; }
+  .popup__window {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-width: 275px;
+    width: calc(100% - 50px);
+    padding: 90px 0;
+    background: #FFFFFF;
+    mix-blend-mode: normal;
+    border-radius: 10px; }
+  .popup__title {
+    margin-bottom: 34px;
+    font-size: 18px;
+    line-height: 99.4%;
+    text-align: center; }
 
 /*# sourceMappingURL=style.css.map */

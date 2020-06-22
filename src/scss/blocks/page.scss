@@ -3,16 +3,60 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
-
   font-family: $font-family;
+  background-image: url(../img/back_sm.png);
+  background-repeat: no-repeat;
+  background-size: auto calc(100% - 365px);
+  background-position: top 365px center;
   background-color: $gray-light;
+  background-blend-mode: multiply;
+  color: $text-color;
 
   &__inner {
+    background: none;
+    flex-grow: 2;
     width: 275px;
   }
 
-  &__content {}
+  &__title {
+    margin: 56px 0 45px;
+    padding: 0;
+    font-size: 23px;
+    line-height: 1.4em;
+    font-weight: 400;
 
-  &__footer-wrapper {}
+    span {
+      display: block;
+      font-weight: 800;
+      font-size: 38px;
+      text-transform: uppercase;
+    }
+  }
+
+
+  &__footer {
+    flex-grow: 0;
+    height: auto;
+    margin: 0 0 40px;
+    text-align: center;
+
+    a {
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0.06em;
+      color: $text-color;
+      opacity: 0.8;
+      text-decoration: none;
+
+      &:hover {
+        opacity: 1;
+        text-decoration: underline;
+      }
+    }
+  }
 }

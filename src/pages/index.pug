@@ -6,8 +6,8 @@ block title
 block body
   body.page
     noscript У вас отключен JavaScript. Это пугает.
-    main.page_inner
-      h1.title скачай приложение #[span контролер]
+    main.page__inner
+      h1.page__title скачай приложение #[span контролер]
       .download-group
         button.download-group__item.download-group__item--android get on
         button.download-group__item.download-group__item--ios download on the #[span iPhone]
@@ -19,6 +19,7 @@ block body
       a(href='#', target='_blank') Политика конфиденциальности данных
 
   //- .popup
-  //-   form.popup__form
-  //-   .popup__title Введите 6-значный код
-  //-   submit.popup__submit Скачать
+  //-   .popup__window
+  //-     form.popup__form
+  //-       .popup__title Введите 6-значный код
+  //-       submit.popup__submit Скачать
