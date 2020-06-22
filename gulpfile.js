@@ -5,8 +5,6 @@ const dir =  {
   build: './build/',
 };
 
-const ghPages = require('gh-pages');
-const path = require('path');
 const { series, parallel, src, dest, watch } = require('gulp');
 const plumber = require('gulp-plumber');
 const sass = require('gulp-sass');
@@ -21,6 +19,8 @@ const concat = require('gulp-concat');
 const pug = require('gulp-pug');
 const prettyHtml = require('gulp-pretty-html');
 const replace = require('gulp-replace');
+const ghPages = require('gh-pages');
+const path = require('path');
 
 function deploy(cb) {
   ghPages.publish(path.join(process.cwd(), './build'), cb);
@@ -60,7 +60,7 @@ function compileStyles() {
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(postcss([
-      autoprefixer(),
+      autoprefixer({overrideBrowserslist: ['last 2 version']}),
     ]))
     .pipe(sourcemaps.write('/'))
     .pipe(dest(dir.build + 'css/'))
@@ -94,7 +94,7 @@ function copyJsVendors() {
 }
 
 function copyImages() {
-  return src(dir.src + 'img/*.{jpg,jpeg,png,svg,webp,gif}')
+  return src(dir.src + 'img/**/*.{jpg,jpeg,png,svg,webp,gif,webmanifest}')
     .pipe(dest(dir.build + 'img/'));
 }
 exports.copyImages = copyImages;
