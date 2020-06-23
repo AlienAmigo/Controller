@@ -21,6 +21,20 @@ const prettyHtml = require('gulp-pretty-html');
 const replace = require('gulp-replace');
 const ghPages = require('gh-pages');
 const path = require('path');
+const cpy = require('cpy');
+
+const nth = {};
+nth.config = require('./config.js');
+
+
+function copyAssets(cb) {
+  for (let item in nth.config.addAssets) {
+    let dest = `${dir.build}${nth.config.addAssets[item]}`;
+    cpy(item, dest);
+  }
+  cb();
+}
+exports.copyAssets = copyAssets;
 
 function deploy(cb) {
   ghPages.publish(path.join(process.cwd(), './build'), cb);
@@ -118,6 +132,9 @@ function serve() {
     port: 8080,
   });
   watch([
+    dir.src + 'assets/*.*',
+  ], copyAssets);
+  watch([
     dir.src + 'scss/*.scss',
     dir.src + 'scss/blocks/*.scss',
   ], compileStyles);
@@ -136,6 +153,6 @@ function serve() {
 
 exports.default = series(
   clean,
-  parallel(compileStyles, compilePug, processJs, copyJsVendors, copyImages, copyFonts),
+  parallel(compileStyles, copyAssets, compilePug, processJs, copyJsVendors, copyImages, copyFonts),
   serve
 );

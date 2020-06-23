@@ -45,6 +45,8 @@
   background-position: top 365px center;
   background-color: #f2f2f2;
   color: #333; }
+  .page--agreement {
+    background-image: none; }
   .page__inner {
     background: none;
     -webkit-box-flex: 2;
@@ -85,6 +87,8 @@
     background-image: url(../img/back_md.png);
     background-position: left 30% top;
     background-size: cover; }
+    .page--agreement {
+      background-image: none; }
     .page__inner {
       width: 610px;
       -webkit-box-align: start;
@@ -105,25 +109,31 @@
 @media only screen and (min-width: 1280px) {
   .page {
     background-image: url(../img/back_lg.png); }
+    .page--agreement {
+      background-image: none; }
     .page__inner {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: vertical;
+      -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-box-align: stretch;
-          -ms-flex-align: stretch;
-              align-items: stretch;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
       width: 1220px;
-      height: calc(100vh - 81px); }
+      min-height: calc(100vh - 81px); }
     .page__title {
       -webkit-box-flex: 0;
           -ms-flex-positive: 0;
               flex-grow: 0;
+      width: -webkit-min-content;
+      width: -moz-min-content;
+      width: min-content;
       margin-top: 265px;
       margin-bottom: 110px; }
     .page__footer {
@@ -149,9 +159,13 @@
     width: 178px;
     height: 50px;
     margin-bottom: 22px;
+    padding-left: 65px;
     border: 2px solid #bdbdbd;
     border-radius: 6px;
     background: #000;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 600;
     color: #fff;
     outline: 0;
     font-family: -apple-system, circe, Arial, sans-serif;
@@ -159,45 +173,33 @@
     cursor: pointer; }
     .download-group__item:hover {
       background: linear-gradient(-45deg, #808080 0%, #333 100%); }
-    .download-group__item--android {
-      padding-right: 40px;
-      font-size: 18px;
-      font-weight: 600; }
-      .download-group__item--android::after {
-        content: '';
-        display: block;
-        position: absolute;
-        width: 29px;
-        height: 32px;
-        top: 50%;
-        right: 40px;
-        background-image: url(../img/android_logo.svg);
-        background-repeat: no-repeat;
-        background-size: auto 100%;
-        -webkit-transform: translateY(-50%);
-                transform: translateY(-50%); }
-    .download-group__item--ios {
-      padding-left: 54px;
-      font-size: 13px;
-      text-align: left; }
-      .download-group__item--ios span {
-        display: block;
-        font-size: 16px;
-        font-weight: 600; }
-      .download-group__item--ios::after {
-        content: '';
-        display: block;
-        position: absolute;
-        width: 30px;
-        height: 35px;
-        top: 50%;
-        left: 13px;
-        background-image: url(../img/apple_logo.svg);
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center center;
-        -webkit-transform: translateY(-50%);
-                transform: translateY(-50%); }
+    .download-group__item--android::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 30px;
+      height: 32px;
+      top: 50%;
+      left: 20px;
+      background-image: url(../img/android_logo.svg);
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%); }
+    .download-group__item--ios::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 30px;
+      height: 35px;
+      top: 50%;
+      left: 20px;
+      background-image: url(../img/apple_logo.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%); }
   .download-group__inst-link {
     font-size: 16px;
     line-height: 112%;
@@ -227,26 +229,28 @@
     -webkit-box-flex: 2;
         -ms-flex-positive: 2;
             flex-grow: 2;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content; }
     .download-group__item {
       width: 300px;
       height: 90px;
       margin-bottom: 35px;
+      padding-left: 110px;
       border-width: 3px;
-      border-radius: 9px; }
+      border-radius: 9px;
+      font-size: 24px; }
       .download-group__item--android::after {
+        left: 40px;
         width: 43px;
-        height: 48px;
-        right: 85px; }
-      .download-group__item--ios {
-        padding-left: 92px;
-        font-size: 17px; }
-        .download-group__item--ios span {
-          font-size: 20px; }
-        .download-group__item--ios::after {
-          left: 25px;
-          width: 50px;
-          height: 60px; }
+        height: 48px; }
+      .download-group__item--ios span {
+        font-size: 20px; }
+      .download-group__item--ios::after {
+        left: 40px;
+        width: 50px;
+        height: 60px; }
     .download-group__inst-link {
       width: 300px; } }
 
@@ -271,7 +275,6 @@
       width: 100%;
       height: 129px;
       background-image: url(../img/org_sm.png);
-      background-blend-mode: multiply;
       mix-blend-mode: multiply; }
     .banners__item--victorina {
       width: 107px;
@@ -298,9 +301,7 @@
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
             flex-grow: 0;
-    margin-top: 44px;
-    -ms-flex-item-align: end;
-        align-self: flex-end; }
+    margin-top: 44px; }
     .banners__item--org {
       height: 212px;
       margin-bottom: 30px;
@@ -325,13 +326,20 @@
       -ms-flex-pack: center;
           justify-content: center;
   position: fixed;
-  z-index: 16;
+  z-index: 15;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.87);
-  opacity: 0.8; }
+  height: 100vh; }
+  .popup::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.87);
+    opacity: 0.8; }
   .popup__window {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -345,14 +353,116 @@
             align-items: center;
     min-width: 275px;
     width: calc(100% - 50px);
+    max-width: 600px;
     padding: 90px 0;
     background: #FFFFFF;
-    mix-blend-mode: normal;
-    border-radius: 10px; }
+    border-radius: 10px;
+    opacity: 1; }
   .popup__title {
     margin-bottom: 34px;
     font-size: 18px;
     line-height: 99.4%;
     text-align: center; }
+  .popup__input-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+  .popup__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .popup__input {
+    width: 52px;
+    height: 88px;
+    margin-left: 16px;
+    border: 1px solid #BDBDBD;
+    border-radius: 2px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    text-align: center;
+    font-size: 24px;
+    font-family: -apple-system, circe, Arial, sans-serif;
+    color: #333;
+    outline: 0; }
+    .popup__input:focus {
+      color: #2786f4;
+      border-color: #2786f4; }
+    .popup__input:first-of-type {
+      margin-left: 0; }
+  .popup__submit {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin: 55px auto 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    padding: 24px 62px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #ffffff;
+    text-transform: uppercase;
+    background-color: #2785f4;
+    cursor: pointer; }
+    .popup__submit:hover {
+      opacity: 0.8; }
+
+@media only screen and (min-width: 992px) {
+  .popup__window {
+    width: 600px; }
+  .popup__submit {
+    padding: 24px 109px; } }
+
+@media only screen and (min-width: 1280px) {
+  .popup__window {
+    width: 705px; } }
+
+.agreement__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  padding: 80px 0; }
+
+.agreement__title {
+  margin: 0 0 1.5em;
+  font-size: 42px;
+  text-align: center; }
+
+.agreement__list {
+  margin: 0 0 0 1em;
+  list-style: disc; }
+  .agreement__list-item {
+    font-size: 14px; }
+
+.agreement__text {
+  margin: 0 0 1em;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2em; }
 
 /*# sourceMappingURL=style.css.map */

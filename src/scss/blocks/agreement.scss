@@ -1,0 +1,31 @@
+.agreement {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 80px 0;
+  }
+
+  &__title {
+    margin: 0 0 1.5em;
+    font-size: 42px;
+    text-align: center;
+  }
+
+  &__list {
+    margin: 0 0 0 1em;
+    list-style: disc;
+
+    &-item {
+      font-size: 14px;
+    }
+  }
+
+  &__text {
+    margin: 0 0 1em;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2em;
+  }
+}

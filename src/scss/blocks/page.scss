@@ -17,6 +17,10 @@
   // background-blend-mode: multiply;
   color: $text-color;
 
+  &--agreement {
+    background-image: none;
+  }
+
   &__inner {
     background: none;
     flex-grow: 2;
@@ -68,6 +72,10 @@
     background-position: left 30% top;
     background-size: cover;
 
+    &--agreement {
+      background-image: none;
+    }
+
     &__inner {
       width: 610px;
       align-items: flex-start;
@@ -96,17 +104,22 @@
   .page {
     background-image: url(../img/back_lg.png);
 
+    &--agreement {
+      background-image: none;
+    }
+
     &__inner {
       display: flex;
-      flex-direction: column;
-      align-items: stretch;
-      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
       width: 1220px;
-      height: calc(100vh - 81px);
+      min-height: calc(100vh - 81px);
     }
 
     &__title {
       flex-grow: 0;
+      width: min-content;
       margin-top: 265px;
       margin-bottom: 110px;
     }
