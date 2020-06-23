@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'circe';
   src: url("../fonts/Circe-Regular.woff") format("woff");
@@ -312,9 +313,7 @@
       background-image: url(../img/victorina_lg.png); } }
 
 .popup {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -412,6 +411,7 @@
     width: min-content;
     padding: 24px 62px;
     border-radius: 10px;
+    border-style: none;
     text-align: center;
     font-weight: 600;
     font-size: 24px;
@@ -421,6 +421,12 @@
     text-transform: uppercase;
     background-color: #2785f4;
     cursor: pointer; }
+    .popup__submit:disabled {
+      background-color: #808080;
+      color: #f2f2f2;
+      cursor: default; }
+      .popup__submit:disabled:hover {
+        opacity: 1; }
     .popup__submit:hover {
       opacity: 0.8; }
 
@@ -446,23 +452,55 @@
       -ms-flex-align: start;
           align-items: flex-start;
   width: 100%;
-  padding: 80px 0; }
+  max-width: 100vw;
+  padding: 40px 0; }
 
 .agreement__title {
   margin: 0 0 1.5em;
-  font-size: 42px;
+  font-size: 24px;
+  line-height: 1.2em;
   text-align: center; }
 
+.agreement__subhead {
+  font-size: 18px; }
+
 .agreement__list {
-  margin: 0 0 0 1em;
-  list-style: disc; }
+  margin: 0 0 0.85em 0;
+  padding: 0 0 0 1em;
+  font-size: 14px; }
   .agreement__list-item {
+    position: relative;
+    margin-bottom: 0.15em;
     font-size: 14px; }
+    .agreement__list-item::before {
+      content: '•';
+      display: inline-block;
+      position: absolute;
+      left: -0.75em;
+      font-weight: 800; }
 
 .agreement__text {
   margin: 0 0 1em;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.2em; }
+
+@media only screen and (min-width: 768px) {
+  .agreement__title {
+    font-size: 30px;
+    line-height: 1.1em; }
+  .agreement__subhead {
+    font-size: 22px; }
+  .agreement__text, .agreement__list, .agreement__list-item {
+    font-size: 16px; } }
+
+@media only screen and (min-width: 1280px) {
+  .agreement__title {
+    font-size: 32px;
+    line-height: 1.1em; }
+  .agreement__subhead {
+    font-size: 24px; }
+  .agreement__text, .agreement__list, .agreement__list-item {
+    font-size: 18px; } }
 
 /*# sourceMappingURL=style.css.map */
