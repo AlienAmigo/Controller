@@ -386,9 +386,9 @@
         -ms-flex-align: center;
             align-items: center; }
   .popup__input {
-    width: 52px;
-    height: 88px;
-    margin-left: 16px;
+    width: 35px;
+    height: 60px;
+    margin-left: 8px;
     border: 1px solid #BDBDBD;
     border-radius: 2px;
     -webkit-box-sizing: border-box;
@@ -438,7 +438,11 @@
   .popup__window {
     width: 600px; }
   .popup__submit {
-    padding: 24px 109px; } }
+    padding: 24px 109px; }
+  .popup__input {
+    width: 52px;
+    height: 88px;
+    margin-left: 16px; } }
 
 @media only screen and (min-width: 1280px) {
   .popup__window {

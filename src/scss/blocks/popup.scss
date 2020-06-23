@@ -54,9 +54,9 @@
   }
 
   &__input {
-    width: 52px;
-    height: 88px;
-    margin-left: 16px;
+    width: 35px;
+    height: 60px;
+    margin-left: 8px;
     border: 1px solid #BDBDBD;
     border-radius: 2px;
     box-sizing: border-box;
@@ -118,6 +118,12 @@
 
       &__submit {
         padding: 24px 109px;
+      }
+
+      &__input {
+        width: 52px;
+        height: 88px;
+        margin-left: 16px;
       }
     }
   }
