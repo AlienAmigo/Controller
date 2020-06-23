@@ -471,9 +471,9 @@
   .agreement__list-item {
     position: relative;
     margin-bottom: 0.15em;
-    font-size: 14px; }
-    list-style
-.agreement__list-item::before {
+    font-size: 14px;
+    list-style: none; }
+    .agreement__list-item::before {
       content: '•';
       display: inline-block;
       position: absolute;
@@ -492,7 +492,10 @@
     line-height: 1.1em; }
   .agreement__subhead {
     font-size: 22px; }
-  .agreement__text, .agreement__list, .agreement__list-item {
+  .agreement__list {
+    font-size: 16px;
+    list-style: none; }
+  .agreement__text, .agreement__list-item {
     font-size: 16px; } }
 
 @media only screen and (min-width: 1280px) {
@@ -501,7 +504,10 @@
     line-height: 1.1em; }
   .agreement__subhead {
     font-size: 24px; }
-  .agreement__text, .agreement__list, .agreement__list-item {
+  .agreement__list {
+    font-size: 18px;
+    list-style: none; }
+  .agreement__text, .agreement__list-item {
     font-size: 18px; } }
 
 /*# sourceMappingURL=style.css.map */
