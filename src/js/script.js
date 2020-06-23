@@ -1,7 +1,7 @@
 const baseCode = '125673';
 const downloadLinks = {
   android: './assets/UGRA.apk',
-  ios: './assets/UGRA.plist',
+  ios: 'itms-services://?action=download-manifest&url=https://контроль.активист.рф/assets/UGRA.plist',
 }
 
 function ready(fn) {
@@ -17,8 +17,14 @@ ready(function(){
   const downloadBtn = document.getElementById("download-btn");
   const androidBtn = document.getElementById("android-btn");
   const iosBtn = document.getElementById("ios-btn");
+  const closeBtn = modal.querySelector('.popup__close-btn');
   let currentCode = [];
   let currentSelected = '';
+
+  closeBtn.onclick = () => {
+    modal.style.display = "none";
+    currentSelected = '';
+  }
 
   window.onclick = (event) => {
     if (event.target === modal) {
