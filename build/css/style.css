@@ -44,7 +44,6 @@
   background-size: auto calc(100% - 365px);
   background-position: top 365px center;
   background-color: #f2f2f2;
-  background-blend-mode: multiply;
   color: #333; }
   .page__inner {
     background: none;
@@ -81,6 +80,28 @@
         opacity: 1;
         text-decoration: underline; }
 
+@media only screen and (min-width: 768px) {
+  .page {
+    background-image: url(../img/back_md.png);
+    background-position: left 30% top;
+    background-size: cover; }
+    .page__inner {
+      width: 610px;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start; }
+    .page__title span {
+      font-size: 60px;
+      line-height: 81.5px; }
+    .page__footer {
+      text-align: right;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
+      margin-right: 32px;
+      margin-bottom: 0;
+      font-size: 14px;
+      line-height: 81px; } }
+
 .download-group {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -106,13 +127,9 @@
     outline: 0;
     font-family: -apple-system, circe, Arial, sans-serif;
     line-height: 1.4em;
-    cursor: pointer;
-    -webkit-transition: background 0.5s ease-in;
-    transition: background 0.5s ease-in; }
+    cursor: pointer; }
     .download-group__item:hover {
-      background: linear-gradient(-45deg, #808080 0%, #333 100%);
-      -webkit-transition: background 0.5s ease-in;
-      transition: background 0.5s ease-in; }
+      background: linear-gradient(-45deg, #808080 0%, #333 100%); }
     .download-group__item--android {
       padding-right: 40px;
       font-size: 18px;
@@ -162,6 +179,19 @@
       opacity: 1;
       text-decoration: underline; }
 
+@media only screen and (min-width: 768px) {
+  .download-group {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+    .download-group__inst-link {
+      width: 200px;
+      margin-top: 30px;
+      text-align: left;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 0; } }
+
 .banners {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -184,13 +214,26 @@
       height: 129px;
       background-image: url(../img/org_sm.png);
       background-blend-mode: multiply;
-      mix-blend-mode: normal; }
+      mix-blend-mode: multiply; }
     .banners__item--victorina {
       width: 107px;
       height: 77px;
       background-image: url(../img/victorina_sm.png); }
       .banners__item--victorina:hover {
         opacity: 0.5; }
+
+@media only screen and (min-width: 768px) {
+  .banners {
+    margin-top: 25px;
+    margin-bottom: 155px;
+    width: 210px; }
+    .banners__item--org {
+      height: 116px;
+      background-image: url(../img/org_md.png); }
+    .banners__item--victorina {
+      width: 96px;
+      height: 69px;
+      background-image: url(../img/victorina_md.png); } }
 
 .popup {
   display: -webkit-box;

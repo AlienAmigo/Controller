@@ -14,7 +14,7 @@
   background-size: auto calc(100% - 365px);
   background-position: top 365px center;
   background-color: $gray-light;
-  background-blend-mode: multiply;
+  // background-blend-mode: multiply;
   color: $text-color;
 
   &__inner {
@@ -57,6 +57,36 @@
         opacity: 1;
         text-decoration: underline;
       }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+  .page {
+    background-image: url(../img/back_md.png);
+    background-position: left 30% top;
+    background-size: cover;
+
+    &__inner {
+      width: 610px;
+      align-items: flex-start;
+    }
+
+    &__title {
+      span {
+        font-size: 60px;
+        line-height: 81.5px;
+      }
+    }
+
+    &__footer {
+      text-align: right;
+      align-self: flex-end;
+      margin-right: 32px;
+      margin-bottom: 0;
+      font-size: 14px;
+      line-height: 81px;
     }
   }
 }

@@ -15,7 +15,7 @@
       height: 129px;
       background-image: url(../img/org_sm.png);
       background-blend-mode: multiply;
-      mix-blend-mode: normal;
+      mix-blend-mode: multiply;
     }
 
     &--victorina {
@@ -25,6 +25,28 @@
 
       &:hover {
         opacity: 0.5;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+  .banners {
+    margin-top: 25px;
+    margin-bottom: 155px;
+    width: 210px;
+
+    &__item {
+      &--org {
+        height: 116px;
+        background-image: url(../img/org_md.png);
+      }
+
+      &--victorina {
+        width: 96px;
+        height: 69px;
+        background-image: url(../img/victorina_md.png);
       }
     }
   }
