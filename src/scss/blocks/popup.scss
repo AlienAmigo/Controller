@@ -130,6 +130,10 @@
     background-color: #2785f4;
     cursor: pointer;
 
+    &:focus {
+      outline: 0;
+    }
+
     &:disabled {
       background-color: $gray;
       color: $gray-light;
@@ -154,6 +158,10 @@
 
       &__submit {
         padding: 24px 109px;
+
+        &:focus {
+          outline: 0;
+        }
       }
 
       &__input {
@@ -168,6 +176,12 @@
     .popup {
       &__window {
         width: 705px;
+      }
+
+      &__submit {
+        &:focus {
+          outline: 0;
+        }
       }
     }
   }
