@@ -1,7 +1,7 @@
 const baseCode = '125673';
 const downloadLinks = {
   android: './assets/UGRA.apk',
-  ios: 'itms-services://?action=download-manifest&url=https://контроль.активист.рф/assets/UGRA.plist',
+  ios: 'itms-services://?action=download-manifest&url=https://alienamigo.github.io/Controller/assets/UGRA.plist',
 }
 
 function downloadFile(filePath){
