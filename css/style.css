@@ -1,0 +1,358 @@
+@font-face {
+  font-family: 'circe';
+  src: url("../fonts/Circe-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block; }
+
+@font-face {
+  font-family: 'circe';
+  src: url("../fonts/Circe-Bold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: block; }
+
+@font-face {
+  font-family: 'circe';
+  src: url("../fonts/Circe-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: block; }
+
+.page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: -apple-system, circe, Arial, sans-serif;
+  background-image: url(../img/back_sm.png);
+  background-repeat: no-repeat;
+  background-size: auto calc(100% - 365px);
+  background-position: top 365px center;
+  background-color: #f2f2f2;
+  color: #333; }
+  .page__inner {
+    background: none;
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
+    width: 275px; }
+  .page__title {
+    margin: 56px 0 45px;
+    padding: 0;
+    font-size: 23px;
+    line-height: 1.4em;
+    font-weight: 400; }
+    .page__title span {
+      display: block;
+      font-weight: 800;
+      font-size: 38px;
+      text-transform: uppercase; }
+  .page__footer {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    height: auto;
+    margin: 0 0 40px;
+    text-align: center; }
+    .page__footer a {
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0.06em;
+      color: #333;
+      opacity: 0.8;
+      text-decoration: none; }
+      .page__footer a:hover {
+        opacity: 1;
+        text-decoration: underline; }
+
+@media only screen and (min-width: 768px) {
+  .page {
+    background-image: url(../img/back_md.png);
+    background-position: left 30% top;
+    background-size: cover; }
+    .page__inner {
+      width: 610px;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start; }
+    .page__title span {
+      font-size: 60px;
+      line-height: 81.5px; }
+    .page__footer {
+      text-align: right;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
+      margin-right: 32px;
+      margin-bottom: 0;
+      font-size: 14px;
+      line-height: 81px; } }
+
+@media only screen and (min-width: 1280px) {
+  .page {
+    background-image: url(../img/back_lg.png); }
+    .page__inner {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: stretch;
+          -ms-flex-align: stretch;
+              align-items: stretch;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      width: 1220px;
+      height: calc(100vh - 81px); }
+    .page__title {
+      -webkit-box-flex: 0;
+          -ms-flex-positive: 0;
+              flex-grow: 0;
+      margin-top: 265px;
+      margin-bottom: 110px; }
+    .page__footer {
+      margin-right: 50px; }
+      .page__footer a {
+        font-size: 16px; } }
+
+.download-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 50px; }
+  .download-group__item {
+    display: block;
+    position: relative;
+    width: 178px;
+    height: 50px;
+    margin-bottom: 22px;
+    border: 2px solid #bdbdbd;
+    border-radius: 6px;
+    background: #000;
+    color: #fff;
+    outline: 0;
+    font-family: -apple-system, circe, Arial, sans-serif;
+    line-height: 1.4em;
+    cursor: pointer; }
+    .download-group__item:hover {
+      background: linear-gradient(-45deg, #808080 0%, #333 100%); }
+    .download-group__item--android {
+      padding-right: 40px;
+      font-size: 18px;
+      font-weight: 600; }
+      .download-group__item--android::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 29px;
+        height: 32px;
+        top: 50%;
+        right: 40px;
+        background-image: url(../img/android_logo.svg);
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%); }
+    .download-group__item--ios {
+      padding-left: 54px;
+      font-size: 13px;
+      text-align: left; }
+      .download-group__item--ios span {
+        display: block;
+        font-size: 16px;
+        font-weight: 600; }
+      .download-group__item--ios::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 35px;
+        top: 50%;
+        left: 13px;
+        background-image: url(../img/apple_logo.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%); }
+  .download-group__inst-link {
+    font-size: 16px;
+    line-height: 112%;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #333;
+    text-decoration: none; }
+    .download-group__inst-link:hover {
+      opacity: 1;
+      text-decoration: underline; }
+
+@media only screen and (min-width: 768px) {
+  .download-group {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+    .download-group__inst-link {
+      width: 200px;
+      margin-top: 30px;
+      text-align: left;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 0; } }
+
+@media only screen and (min-width: 1280px) {
+  .download-group {
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
+    margin-bottom: 0; }
+    .download-group__item {
+      width: 300px;
+      height: 90px;
+      margin-bottom: 35px;
+      border-width: 3px;
+      border-radius: 9px; }
+      .download-group__item--android::after {
+        width: 43px;
+        height: 48px;
+        right: 85px; }
+      .download-group__item--ios {
+        padding-left: 92px;
+        font-size: 17px; }
+        .download-group__item--ios span {
+          font-size: 20px; }
+        .download-group__item--ios::after {
+          left: 25px;
+          width: 50px;
+          height: 60px; }
+    .download-group__inst-link {
+      width: 300px; } }
+
+.banners {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 55px 0 480px; }
+  .banners__item {
+    margin-bottom: 20px;
+    outline: 0;
+    background-position: center center;
+    background-repeat: no-repeat; }
+    .banners__item--org {
+      width: 100%;
+      height: 129px;
+      background-image: url(../img/org_sm.png);
+      background-blend-mode: multiply;
+      mix-blend-mode: multiply; }
+    .banners__item--victorina {
+      width: 107px;
+      height: 77px;
+      background-image: url(../img/victorina_sm.png); }
+      .banners__item--victorina:hover {
+        opacity: 0.5; }
+
+@media only screen and (min-width: 768px) {
+  .banners {
+    margin-top: 25px;
+    margin-bottom: 155px;
+    width: 210px; }
+    .banners__item--org {
+      height: 116px;
+      background-image: url(../img/org_md.png); }
+    .banners__item--victorina {
+      width: 96px;
+      height: 69px;
+      background-image: url(../img/victorina_md.png); } }
+
+@media only screen and (min-width: 1280px) {
+  .banners {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    margin-top: 44px;
+    -ms-flex-item-align: end;
+        align-self: flex-end; }
+    .banners__item--org {
+      height: 212px;
+      margin-bottom: 30px;
+      background-image: url(../img/org_lg.png); }
+    .banners__item--victorina {
+      width: 178px;
+      height: 125px;
+      background-image: url(../img/victorina_lg.png); } }
+
+.popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  z-index: 16;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.87);
+  opacity: 0.8; }
+  .popup__window {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-width: 275px;
+    width: calc(100% - 50px);
+    padding: 90px 0;
+    background: #FFFFFF;
+    mix-blend-mode: normal;
+    border-radius: 10px; }
+  .popup__title {
+    margin-bottom: 34px;
+    font-size: 18px;
+    line-height: 99.4%;
+    text-align: center; }
+
+/*# sourceMappingURL=style.css.map */
