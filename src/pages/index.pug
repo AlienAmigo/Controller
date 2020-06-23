@@ -10,8 +10,8 @@ block body
       .page__left-wrapper
         h1.page__title скачай приложение #[span контролер]
         .download-group
-          button.download-group__item.download-group__item--android Android
-          button.download-group__item.download-group__item--ios iPhone
+          button.download-group__item.download-group__item--android(id='android-btn') Android
+          button.download-group__item.download-group__item--ios(id='ios-btn') iPhone
           a.download-group__inst-link(href='#') Инструкция по&nbsp;установке на&nbsp;iPhone
       .banners
         .banners__item.banners__item--org
@@ -19,17 +19,17 @@ block body
     .page__footer
       a(href='agreement.html', target='_blank') Политика конфиденциальности данных
 
-  .popup
+  .popup(id='modal-base')
     .popup__window
-      form.popup__form
+      .popup__form
         .popup__title Введите 6-значный код
         .popup__input-wrapper
-          input(type='text', maxlength='1').popup__input
-          input(type='text', maxlength='1').popup__input
-          input(type='text', maxlength='1').popup__input
-          input(type='text', maxlength='1').popup__input
-          input(type='text', maxlength='1').popup__input
-          input(type='text', maxlength='1').popup__input
-        submit.popup__submit Скачать
+          input.popup__input(type='text', maxlength='1', id='code-0')
+          input.popup__input(type='text', maxlength='1', id='code-1')
+          input.popup__input(type='text', maxlength='1', id='code-2')
+          input.popup__input(type='text', maxlength='1', id='code-3')
+          input.popup__input(type='text', maxlength='1', id='code-4')
+          input.popup__input(type='text', maxlength='1', id='code-5')
+        button.popup__submit(id='download-btn', disabled='true') Скачать
 
   script(src='js/script.min.js')
