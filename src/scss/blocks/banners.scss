@@ -51,3 +51,25 @@
     }
   }
 }
+
+@media only screen and (min-width: $screen-lg) {
+  .banners {
+    flex-grow: 0;
+    margin-top: 44px;
+    align-self: flex-end;
+
+    &__item {
+      &--org {
+        height: 212px;
+        margin-bottom: 30px;
+        background-image: url(../img/org_lg.png);
+      }
+
+      &--victorina {
+        width: 178px;
+        height: 125px;
+        background-image: url(../img/victorina_lg.png);
+      }
+    }
+  }
+}

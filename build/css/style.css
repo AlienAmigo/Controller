@@ -102,6 +102,35 @@
       font-size: 14px;
       line-height: 81px; } }
 
+@media only screen and (min-width: 1280px) {
+  .page {
+    background-image: url(../img/back_lg.png); }
+    .page__inner {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: stretch;
+          -ms-flex-align: stretch;
+              align-items: stretch;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      width: 1220px;
+      height: calc(100vh - 81px); }
+    .page__title {
+      -webkit-box-flex: 0;
+          -ms-flex-positive: 0;
+              flex-grow: 0;
+      margin-top: 265px;
+      margin-bottom: 110px; }
+    .page__footer {
+      margin-right: 50px; }
+      .page__footer a {
+        font-size: 16px; } }
+
 .download-group {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -152,6 +181,7 @@
       font-size: 13px;
       text-align: left; }
       .download-group__item--ios span {
+        display: block;
         font-size: 16px;
         font-weight: 600; }
       .download-group__item--ios::after {
@@ -191,6 +221,34 @@
       font-size: 18px;
       line-height: 22px;
       letter-spacing: 0; } }
+
+@media only screen and (min-width: 1280px) {
+  .download-group {
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
+    margin-bottom: 0; }
+    .download-group__item {
+      width: 300px;
+      height: 90px;
+      margin-bottom: 35px;
+      border-width: 3px;
+      border-radius: 9px; }
+      .download-group__item--android::after {
+        width: 43px;
+        height: 48px;
+        right: 85px; }
+      .download-group__item--ios {
+        padding-left: 92px;
+        font-size: 17px; }
+        .download-group__item--ios span {
+          font-size: 20px; }
+        .download-group__item--ios::after {
+          left: 25px;
+          width: 50px;
+          height: 60px; }
+    .download-group__inst-link {
+      width: 300px; } }
 
 .banners {
   display: -webkit-box;
@@ -234,6 +292,23 @@
       width: 96px;
       height: 69px;
       background-image: url(../img/victorina_md.png); } }
+
+@media only screen and (min-width: 1280px) {
+  .banners {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    margin-top: 44px;
+    -ms-flex-item-align: end;
+        align-self: flex-end; }
+    .banners__item--org {
+      height: 212px;
+      margin-bottom: 30px;
+      background-image: url(../img/org_lg.png); }
+    .banners__item--victorina {
+      width: 178px;
+      height: 125px;
+      background-image: url(../img/victorina_lg.png); } }
 
 .popup {
   display: -webkit-box;
