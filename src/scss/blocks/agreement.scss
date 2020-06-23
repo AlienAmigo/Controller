@@ -19,6 +19,16 @@
     font-size: 18px;
   }
 
+  &__img {
+    max-width: 100%;
+    margin-bottom: 1em;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
   &__list {
     margin: 0 0 0.85em 0;
     padding: 0 0 0 1em;
@@ -61,6 +71,10 @@
       font-size: 22px;
     }
 
+    &__img {
+      max-width: 500px;
+    }
+
     &__list {
       font-size: 16px;
       list-style: none;
@@ -96,5 +110,4 @@
         font-size: 18px;
       }
     }
-
 }
