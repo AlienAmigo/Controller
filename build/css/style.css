@@ -472,7 +472,8 @@
     position: relative;
     margin-bottom: 0.15em;
     font-size: 14px; }
-    .agreement__list-item::before {
+    list-style
+.agreement__list-item::before {
       content: '•';
       display: inline-block;
       position: absolute;
