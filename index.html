@@ -18,14 +18,26 @@
 
 <body class="page"><noscript>У вас отключен JavaScript. Это пугает.</noscript>
   <main class="page__inner">
-    <h1 class="page__title">скачай приложение <span>контролер</span></h1>
-    <div class="download-group"><button class="download-group__item download-group__item--android">get on</button><button class="download-group__item download-group__item--ios">download on the <span>iPhone</span></button><a class="download-group__inst-link" href="#">Инструкция по&nbsp;установке на&nbsp;iPhone</a></div>
+    <div class="page__left-wrapper">
+      <h1 class="page__title">скачай приложение <span>контролер</span></h1>
+      <div class="download-group"><button class="download-group__item download-group__item--android">Android</button><button class="download-group__item download-group__item--ios">iPhone</button><a class="download-group__inst-link" href="#">Инструкция по&nbsp;установке на&nbsp;iPhone</a></div>
+    </div>
     <div class="banners">
       <div class="banners__item banners__item--org"></div><a class="banners__item banners__item--victorina" href="https://vmk.myopenugra.ru/index.php" target="_blank"></a>
     </div>
   </main>
-  <div class="page__footer"><a href="#" target="_blank">Политика конфиденциальности данных</a></div>
+  <div class="page__footer"><a href="agreement.html" target="_blank">Политика конфиденциальности данных</a></div>
 </body>
+<div class="popup">
+  <div class="popup__window">
+    <form class="popup__form">
+      <div class="popup__title">Введите 6-значный код</div>
+      <div class="popup__input-wrapper"><input class="popup__input" type="text" maxlength="1"><input class="popup__input" type="text" maxlength="1"><input class="popup__input" type="text" maxlength="1"><input class="popup__input" type="text" maxlength="1"><input class="popup__input" type="text" maxlength="1"><input class="popup__input" type="text" maxlength="1"></div>
+      <submit class="popup__submit">Скачать</submit>
+    </form>
+  </div>
+</div>
+<script src="js/script.min.js"></script>
 </head>
 
 </html>
