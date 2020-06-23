@@ -411,6 +411,7 @@
     width: min-content;
     padding: 24px 62px;
     border-radius: 10px;
+    border-style: none;
     text-align: center;
     font-weight: 600;
     font-size: 24px;
@@ -420,6 +421,12 @@
     text-transform: uppercase;
     background-color: #2785f4;
     cursor: pointer; }
+    .popup__submit:disabled {
+      background-color: #808080;
+      color: #f2f2f2;
+      cursor: default; }
+      .popup__submit:disabled:hover {
+        opacity: 1; }
     .popup__submit:hover {
       opacity: 0.8; }
 

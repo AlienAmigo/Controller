@@ -83,6 +83,7 @@
     width: min-content;
     padding:  24px 62px;
     border-radius: 10px;
+    border-style: none;
     text-align: center;
     font-weight: 600;
     font-size: 24px;
@@ -92,6 +93,16 @@
     text-transform: uppercase;
     background-color: #2785f4;
     cursor: pointer;
+
+    &:disabled {
+      background-color: $gray;
+      color: $gray-light;
+      cursor: default;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
 
     &:hover {
       opacity: 0.8;
