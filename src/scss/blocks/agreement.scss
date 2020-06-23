@@ -61,8 +61,12 @@
       font-size: 22px;
     }
 
+    &__list {
+      font-size: 16px;
+      list-style: none;
+    }
+
     &__text,
-    &__list,
     &__list-item {
       font-size: 16px;
     }
@@ -82,8 +86,12 @@
         font-size: 24px;
       }
 
+      &__list {
+        font-size: 18px;
+        list-style: none;
+      }
+
       &__text,
-      &__list,
       &__list-item {
         font-size: 18px;
       }
