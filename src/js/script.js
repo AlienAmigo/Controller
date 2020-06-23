@@ -4,6 +4,13 @@ const downloadLinks = {
   ios: 'itms-services://?action=download-manifest&url=https://контроль.активист.рф/assets/UGRA.plist',
 }
 
+function downloadFile(filePath){
+  var link=document.createElement('a');
+  link.href = filePath;
+  link.download = filePath.substr(filePath.lastIndexOf('/') + 1);
+  link.click();
+}
+
 function ready(fn) {
   if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
     fn();
@@ -44,7 +51,7 @@ ready(function(){
   }
 
   downloadBtn.onclick = () => {
-    window.open(downloadLinks[currentSelected]);
+    downloadFile(downloadLinks[currentSelected]);
   }
 
   Array(6).fill(0).forEach((_, i) => {
