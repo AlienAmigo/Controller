@@ -43,8 +43,9 @@
   background-image: url(../img/back_sm.png);
   background-repeat: no-repeat;
   background-size: auto calc(100% - 365px);
-  background-position: top 365px center;
+  background-position: top 430px center;
   background-color: #f2f2f2;
+  background-blend-mode: multiply;
   color: #333; }
   .page--agreement {
     background-image: none; }
@@ -109,7 +110,8 @@
 
 @media only screen and (min-width: 1280px) {
   .page {
-    background-image: url(../img/back_lg.png); }
+    background-image: url(../img/back_lg.png);
+    background-position: left 30% center; }
     .page--agreement {
       background-image: none; }
     .page__inner {
@@ -135,7 +137,7 @@
       width: -webkit-min-content;
       width: -moz-min-content;
       width: min-content;
-      margin-top: 265px;
+      margin-top: 40px;
       margin-bottom: 110px; }
     .page__footer {
       margin-right: 50px; }
@@ -202,6 +204,7 @@
       -webkit-transform: translateY(-50%);
               transform: translateY(-50%); }
   .download-group__inst-link {
+    margin-bottom: 20px;
     font-size: 16px;
     line-height: 112%;
     text-align: center;
@@ -220,6 +223,7 @@
     .download-group__inst-link {
       width: 200px;
       margin-top: 30px;
+      margin-bottom: 0;
       text-align: left;
       font-size: 18px;
       line-height: 22px;
@@ -464,6 +468,13 @@
 .agreement__subhead {
   font-size: 18px; }
 
+.agreement__img {
+  max-width: 100%;
+  margin-bottom: 1em; }
+  .agreement__img img {
+    width: 100%;
+    height: auto; }
+
 .agreement__list {
   margin: 0 0 0.85em 0;
   padding: 0 0 0 1em;
@@ -492,6 +503,8 @@
     line-height: 1.1em; }
   .agreement__subhead {
     font-size: 22px; }
+  .agreement__img {
+    max-width: 500px; }
   .agreement__list {
     font-size: 16px;
     list-style: none; }
