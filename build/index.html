@@ -6,6 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="5bbad5">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="css/style.css">
   <title>Контроллер | Мобильные приложения для Android и iOS</title>
   <!--[if lt IE 9]>
@@ -20,7 +27,7 @@
   <main class="page__inner">
     <div class="page__left-wrapper">
       <h1 class="page__title">скачай приложение <span>контролер</span></h1>
-      <div class="download-group"><button class="download-group__item download-group__item--android">Android</button><button class="download-group__item download-group__item--ios">iPhone</button><a class="download-group__inst-link" href="#">Инструкция по&nbsp;установке на&nbsp;iPhone</a></div>
+      <div class="download-group"><button class="download-group__item download-group__item--android" id="android-btn">Android</button><button class="download-group__item download-group__item--ios" id="ios-btn">iPhone</button><a class="download-group__inst-link" href="#">Инструкция по&nbsp;установке на&nbsp;iPhone</a></div>
     </div>
     <div class="banners">
       <div class="banners__item banners__item--org"></div><a class="banners__item banners__item--victorina" href="https://vmk.myopenugra.ru/index.php" target="_blank"></a>
@@ -28,13 +35,12 @@
   </main>
   <div class="page__footer"><a href="agreement.html" target="_blank">Политика конфиденциальности данных</a></div>
 </body>
-<div class="popup">
+<div class="popup" id="modal-base">
   <div class="popup__window">
-    <form class="popup__form">
+    <div class="popup__form">
       <div class="popup__title">Введите 6-значный код</div>
-      <div class="popup__input-wrapper"><input class="popup__input" type="text" maxlength="1"><input class="popup__input" type="text" maxlength="1"><input class="popup__input" type="text" maxlength="1"><input class="popup__input" type="text" maxlength="1"><input class="popup__input" type="text" maxlength="1"><input class="popup__input" type="text" maxlength="1"></div>
-      <submit class="popup__submit">Скачать</submit>
-    </form>
+      <div class="popup__input-wrapper"><input class="popup__input" type="text" maxlength="1" id="code-0"><input class="popup__input" type="text" maxlength="1" id="code-1"><input class="popup__input" type="text" maxlength="1" id="code-2"><input class="popup__input" type="text" maxlength="1" id="code-3"><input class="popup__input" type="text" maxlength="1" id="code-4"><input class="popup__input" type="text" maxlength="1" id="code-5"></div><button class="popup__submit" id="download-btn" disabled="true">Скачать</button>
+    </div>
   </div>
 </div>
 <script src="js/script.min.js"></script>
