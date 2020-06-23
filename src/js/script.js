@@ -44,7 +44,7 @@ ready(function(){
   }
 
   downloadBtn.onclick = () => {
-    window.open(downloadLinks[currentSelected], '_blank');
+    window.open(downloadLinks[currentSelected]);
   }
 
   Array(6).fill(0).forEach((_, i) => {
